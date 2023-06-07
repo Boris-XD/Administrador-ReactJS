@@ -1,11 +1,34 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, Link, useLocation, NavLink } from "react-router-dom"
 
 const Layout = () => {
-  return (
-    <div>
-        <h1 className="text-6xl font-bold">CRM - React JS</h1>
 
-        <Outlet />
+    const location = useLocation();
+
+  return (
+    <div className="md:flex md:min-h-screen">
+        <aside className="md:w-1/4 bg-blue-900 px-5 py-10">
+            <h2 className="text-4xl font-black text-center text-white">CRM - Clients</h2>
+
+            <nav className="mt-10">
+                <Link
+                    className={`${location.pathname == '/' ? 'text-white' : ' text-blue'} text-2xl block mt-3 hover:text-blue-300`}
+                    to="/"
+                >
+                    Clients
+                </Link>
+                <NavLink
+                    className={({isActive}) => isActive 
+                        ? 'text-2xl block mt-3 hover:text-blue-30 text-white'
+                        : 'text-2xl block mt-3 hover:text-blue-30 text-blue'}
+                    to="/client/new"
+                >
+                    New Client
+                </NavLink>
+            </nav>
+        </aside>
+        <main className="md:w-3/4 p-10 md:h-screen overflow-scroll">
+            <Outlet />
+        </main>
     </div>
   )
 }
