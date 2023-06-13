@@ -20,15 +20,13 @@ export const action = async ({ request }) =>
     if(!regex.test(datos.email)){
       errores.push("Email field isn't valid");
     }
-
-
-
+    
     // Return Errrors
     if(Object.keys(errores).length){
       return errores;
     }
 
-    const result = await saveClient(datos);
+    await saveClient(datos);
     
     return redirect("/");
 }

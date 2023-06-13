@@ -3,6 +3,11 @@ export const getClients = async () => {
     return await result.json();
 }
 
+export const getClient = async (clientId) => {
+    const result = await fetch(`${import.meta.env.VITE_API_URL}/${clientId}`)
+    return await result.json();
+}
+
 export const saveClient = async (datos) => {
     try{
         console.log(datos)

@@ -6,6 +6,7 @@ import Layout from './components/Layout'
 import Index, { loader as loaderIndex } from './pages/Index'
 import './index.css'
 import ErrorBoundaries from './components/ErrorBoundaries'
+import EditClient, { loader as loaderEditClient} from './pages/EditClient'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
         path: '/client/new',
         element: <NewClient />,
         action: newClientAction
+      },
+      {
+        path: 'client/:clientId/edit',
+        element: <EditClient />,
+        loader: loaderEditClient
       }
     ]
   }
