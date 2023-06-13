@@ -4,7 +4,7 @@ import { getClients } from "../api/clients";
 
 export function loader(){
     const clients = getClients();
-    return clients;
+    // return clients;
 };
 
 const Index = () => {
