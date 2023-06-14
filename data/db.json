@@ -1,11 +1,12 @@
 {
   "clients": [
     {
-      "id": 1,
-      "nombre": "Juan",
-      "telefono": 102013313,
+      "nombre": "Juan 1",
+      "empresa": "Codigo Con Juan",
       "email": "juan@juan.com",
-      "empresa": "Codigo Con Juan"
+      "telefono": "102013313",
+      "notas": "Notas de juan ",
+      "id": 1
     },
     {
       "id": 2,
@@ -29,35 +30,12 @@
       "empresa": "Codigo Con Juan"
     },
     {
-      "id": 5,
       "nombre": "Pedro",
-      "telefono": 1398198938,
+      "empresa": "Codigo Con Juan",
       "email": "pedro@juan.com",
-      "empresa": "Codigo Con Juan"
-    },
-    {
-      "nombre": "Rouss Garnica Torrez",
-      "empresa": "Telecos frons",
-      "email": "example@example.com",
-      "telefono": "+150123456",
-      "notas": "Save content",
-      "id": 6
-    },
-    {
-      "nombre": "Sebastian",
-      "empresa": "Fake",
-      "email": "example@example.com",
-      "telefono": "+150123456",
-      "notas": "notes",
-      "id": 7
-    },
-    {
-      "nombre": "Desarrollo Movil - Flutter",
-      "empresa": "terter",
-      "email": "example@example.com",
-      "telefono": "+150123456",
-      "notas": "notes",
-      "id": 8
+      "telefono": "1398198938",
+      "notas": "Notas de Pedro",
+      "id": 5
     }
   ]
 }

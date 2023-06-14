@@ -10,7 +10,6 @@ export const getClient = async (clientId) => {
 
 export const saveClient = async (datos) => {
     try{
-        console.log(datos)
         const result = await fetch(import.meta.env.VITE_API_URL, {
             method: 'POST',
             body: JSON.stringify(datos),
@@ -24,5 +23,34 @@ export const saveClient = async (datos) => {
     {
         console.log(error);
     }
+}
 
+export const updateClient = async (id, datos) => {
+    try{
+        const result = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(datos),
+            headers: {
+                'content-type': 'application/json'
+            }
+        });
+
+        return await result.json();
+    }catch(error)
+    {
+        console.log(error);
+    }
+}
+
+export const deleteClient = async (id) => {
+    try{
+        const result = await fetch(`${import.meta.env.VITE_API_URL}/${id}`, {
+            method: 'DELETE'
+        });
+
+        return await result.json();
+    }catch(error)
+    {
+        console.log(error)
+    }
 }
